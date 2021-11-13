@@ -9,13 +9,6 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AppProvider>
-      <Head>
-        <title>Template</title>
-
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
-
       <Component {...pageProps} />
     </AppProvider>
   );

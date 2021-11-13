@@ -1,1 +1,1 @@
-# next-tailwind-template
+# next-tailwind-boilerplate

@@ -5,5 +5,5 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>,
 ) {
-  res.status(200).json('next-tailwind-template');
+  res.status(200).json('hello');
 }
