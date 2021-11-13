@@ -1,0 +1,24 @@
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+
+import { AppProvider } from '../components/AppContext';
+
+import 'tailwindcss/tailwind.css';
+import '../styles/globals.css';
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <AppProvider>
+      <Head>
+        <title>Template</title>
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+
+      <Component {...pageProps} />
+    </AppProvider>
+  );
+}
+
+export default MyApp;
