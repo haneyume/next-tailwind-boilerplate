@@ -1,14 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 
+import './i18n';
+
 type HttpMethod = 'get' | 'post' | 'put' | 'patch' | 'delete';
 
 export interface AppContextProps {
   initialized: boolean;
   setInitialized: React.Dispatch<React.SetStateAction<boolean>>;
-
-  uid: string;
-  setUid: React.Dispatch<React.SetStateAction<string>>;
 
   showLoading: (value: boolean) => void;
   showNotification: (title: string, body: string) => void;
@@ -23,7 +22,6 @@ export interface AppProviderProps {
 
 export const AppProvider = ({ children }: AppProviderProps) => {
   const [initialized, setInitialized] = React.useState<boolean>(false);
-  const [uid, setUid] = React.useState<string>('');
 
   const showNotification = (title: string, body: string) => {
     // notification.error({
@@ -56,9 +54,6 @@ export const AppProvider = ({ children }: AppProviderProps) => {
       value={{
         initialized,
         setInitialized,
-
-        uid,
-        setUid,
 
         showLoading: () => {},
         showNotification,
